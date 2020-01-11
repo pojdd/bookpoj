@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    background: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1XNvasoQ0GU1S1JdL8t_IiuoIkzkFdGLjeXrehJxZekcqSuDuNQ&s","http://pic.51yuansu.com/backgd/cover/00/02/30/5b55a7417869f.jpg!/fw/780/quality/90/unsharp/true/compress/true"]
   },
 
   /**
