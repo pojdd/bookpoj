@@ -1,0 +1,49 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/bookstore/bookstore",
+    "pages/search/search",
+    "pages/main/main",
+    "pages/logs/logs",
+    "pages/bookshelf/bookshelf",
+    "pages/aboutme/aboutme"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+"tabBar": {
+  "list": [
+    {
+      "pagePath": "pages/bookshelf/bookshelf",
+      "text": "书架",
+      "iconPath":"iconimg/bookshelf_normal.png",
+      "selectedIconPath":"iconimg/bookshelf_press.png"
+    },
+    {
+      "pagePath": "pages/bookstore/bookstore",
+      "text": "书城",
+      "iconPath": "iconimg/bookstore_normal.png",
+      "selectedIconPath": "iconimg/bookstore_press.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "iconimg/search_normal.png",
+      "selectedIconPath": "iconimg/search_press.png"
+    },
+    {
+      "pagePath": "pages/aboutme/aboutme",
+      "text": "我的",
+      "iconPath": "iconimg/about_normal.png",
+      "selectedIconPath": "iconimg/about_press.png"
+    }
+  ],
+  "selectedColor": "#1296db"
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

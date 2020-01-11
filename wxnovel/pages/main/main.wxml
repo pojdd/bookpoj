@@ -1,0 +1,33 @@
+<view class="page">
+<!--searchbar start-->
+  <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+  </view>
+  <!--searchbar end-->
+  <!--Pannel start-->
+    <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">书架</view>
+      <view class="weui-panel__bd" wx:for="{{articles}}">
+        <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="sendcontent" data-content="{{item.content}}">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="{{item.pic}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__desc">微信公众号 ：{{item.weixinname}}</view>
+            <view class="weui-media-box__desc">发布时间 ：{{item.time}}</view>
+            <view class="weui-media-box__desc">主题 : {{item.title}}</view>
+          </view>
+        </navigator>
+      </view>
+      <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <view class="weui-cell__bd">查看更多</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+    <!--Pannel end-->
+    <!--slideview start-->
+</view>
