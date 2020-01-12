@@ -9,71 +9,109 @@
 </swiper>
 </view>
 <view class="body">
+
+    <!--fantsy novel model start -->
     <view class="view-item">
-        <text class="view-item-text1">猜你喜欢</text>
+        <text class="view-item-text1">玄幻争锋</text>
         <text class="view-item-text2">换一换</text>
     </view>
-
     <view class="view-item-book">
-      <view class="view-item-book1">
-        <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
-      </view>
-      <view class="view-item-book1">
-        <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
-      </view>
-      <view class="view-item-book1">
-              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
-      </view>
-      <view class="view-item-book1">
-              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
-      </view>
-      <view class="view-item-book1">
-              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
-      </view>
-      <view class="view-item-book1">
-              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <text class="view-item-book1-text">都市最强医仙</text>
+      <view class="view-item-book1"  wx:for="{{fantsy}}">
+        <image class="view-item-book1-img" src="{{item.pic}}"></image>
+        <text class="view-item-book1-text">{{item.bookname}}</text>
       </view>
     </view>
+    <!--fantsy novel model end-->
+    <!--city novel model start -->
   <view class="view-item">
-        <text class="view-item-text1">热销爽文</text>
+        <text class="view-item-text1">都市爽文</text>
     </view>
   <view class="view-item-fire">
 
-    <view class="view-item-fire-body1">
-        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+    <view class="view-item-fire-body1" wx:for="{{city}}">
+        <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
         <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">荒野之王</text>
-          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
-          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
+          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
         </view>
     </view>
-
-    <view class="view-item-fire-body1">
-        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">荒野之王</text>
-          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
-          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
-        </view>
-    </view>
-
-
-    <view class="view-item-fire-body1">
-        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
-        <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">荒野之王</text>
-          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
-          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
-        </view>
-    </view>
-
   </view>
+  <!--city novel model start -->
+
+      <!--selfcultivation novel model start -->
+    <view class="view-item">
+        <text class="view-item-text1">修真</text>
+        <text class="view-item-text2">换一换</text>
+    </view>
+    <view class="view-item-book">
+      <view class="view-item-book1"  wx:for="{{selfcultivation}}">
+        <image class="view-item-book1-img" src="{{item.pic}}"></image>
+        <text class="view-item-book1-text">{{item.bookname}}</text>
+      </view>
+    </view>
+    <!--selfcultivation novel model end-->
+
+        <!--crossing novel model start -->
+  <view class="view-item">
+        <text class="view-item-text1">穿越异世</text>
+    </view>
+  <view class="view-item-fire">
+
+    <view class="view-item-fire-body1" wx:for="{{crossing}}">
+        <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
+        <view class="view-item-fire-body1-view">
+          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
+        </view>
+    </view>
+  </view>
+  <!--crossing  novel model start -->
+
+  <!--onlinegame novel model start -->
+    <view class="view-item">
+        <text class="view-item-text1">女生精选</text>
+        <text class="view-item-text2">换一换</text>
+    </view>
+    <view class="view-item-book">
+      <view class="view-item-book1"  wx:for="{{girl}}">
+        <image class="view-item-book1-img" src="{{item.pic}}"></image>
+        <text class="view-item-book1-text">{{item.bookname}}</text>
+      </view>
+    </view>
+    <!--onlinegame novel model end-->
+
+
+            <!--scifi novel model start -->
+  <view class="view-item">
+        <text class="view-item-text1">科学探索</text>
+    </view>
+  <view class="view-item-fire">
+
+    <view class="view-item-fire-body1" wx:for="{{scifi}}">
+        <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
+        <view class="view-item-fire-body1-view">
+          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
+        </view>
+    </view>
+  </view>
+  <!--scifi  novel model start -->
+
+        <!--onelinegame novel model start -->
+    <view class="view-item">
+        <text class="view-item-text1">肝爆网游</text>
+        <text class="view-item-text2">换一换</text>
+    </view>
+    <view class="view-item-book">
+      <view class="view-item-book1"  wx:for="{{onlinegame}}">
+        <image class="view-item-book1-img" src="{{item.pic}}"></image>
+        <text class="view-item-book1-text">{{item.bookname}}</text>
+      </view>
+    </view>
+    <!--onelinegame novel model end-->
 </view>
 
 

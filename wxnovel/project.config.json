@@ -25,7 +25,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
 	"appid": "wx2e282b10dd31f8a2",
-	"projectname": "novel.1.0",
+	"projectname": "wxbook",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

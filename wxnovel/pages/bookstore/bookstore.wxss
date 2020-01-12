@@ -28,6 +28,7 @@
   height:100%;
   display: inline-block;
   margin-left: 40rpx;
+  font-size:40rpx;
   font-weight: 800;
 }
 
@@ -59,7 +60,8 @@
 }
 
 .view-item-book1-text{
-  font-size:32rpx;
+  font-size:21rpx;
+  font-weight: 900;
   text-align: center;
   color: #bfbfbf
 }
@@ -91,6 +93,7 @@
   margin-top: 25rpx;
   font-weight: 700;
   display: block;
+  font-size:42rpx;
 }
 
 .view-item-fire-body1-view-text2{
