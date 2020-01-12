@@ -27,7 +27,7 @@ Page({
       },
 
       btn: function() {
-        if (this.data.account == "" && this.data.password == "" && this.data.email == "") {
+        if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
           wx.showToast({
             title: '账号密码邮箱不能为空！！',
             icon: 'none'
