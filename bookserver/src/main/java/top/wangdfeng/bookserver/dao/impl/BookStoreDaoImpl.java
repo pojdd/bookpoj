@@ -21,7 +21,7 @@ public class BookStoreDaoImpl implements BookStoreDao {
     private static String SQL;
 
     static {
-        SQL="select * from book";
+        SQL="select * from book order by readcount DESC";
     }
 
     @Override
@@ -29,7 +29,10 @@ public class BookStoreDaoImpl implements BookStoreDao {
         QueryRunner queryRunner=new QueryRunner(dataSource);
         try {
             List<Book> list=queryRunner.query(SQL,new BeanListHandler<Book>(Book.class));
-            System.out.println("sql执行的结果为:"+list.size());
+            for (Book book:list
+                 ) {
+                book.setShortsummry(book.getSummry().substring(0,13)+"...");
+            }
             return list;
         } catch (SQLException e) {
             e.printStackTrace();

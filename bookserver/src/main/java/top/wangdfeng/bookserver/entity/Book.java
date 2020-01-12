@@ -9,6 +9,15 @@ public class Book {
     private String bookclass;
     private int readcount;
     private String updatatime;
+    private String shortsummry;
+
+    public String getShortsummry() {
+        return shortsummry;
+    }
+
+    public void setShortsummry(String shortsummry) {
+        this.shortsummry = shortsummry;
+    }
 
     public Book() {
     }
