@@ -44,10 +44,10 @@ Page({
     }else{
     var that=this;
     wx.request({
-      url: 'http://192.168.2.149:8080/login',
+      url: 'http://localhost:8080/login',
       data:{
-        u_account:this.data.ac,
-        u_password:this.data.pw 
+        account:this.data.ac,
+        password:this.data.pw 
       },
       header: {
         'content-type': 'application/json' // 默认值

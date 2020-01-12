@@ -53,12 +53,6 @@ public class UserDaoImpl implements UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(user==null){
-            System.out.println("queryAccount不存在");
-        }else{
-            System.out.println("queryAccount存在");
-        }
-
         return user;
     }
 
