@@ -8,13 +8,13 @@
       </view>
       <view class="userinforight">
         <view class="username">
-          <text>用户名:{{name}}</text>
+          <text >用户名:{{userInfo.nickName}}</text>
         </view>
         <view class="useraccount">
           <text>账号:{{account}}</text>
         </view>
-        <view class="usersex">
-          <text>性别：{{sex}}</text>
+        <view class="usereamil">
+          <text>邮箱：{{email}}</text>
         </view>
 
       </view>

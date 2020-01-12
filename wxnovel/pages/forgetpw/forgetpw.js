@@ -27,8 +27,14 @@ Page({
 
 
   btn: function () {
+    if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
+      wx.showToast({
+        title: '账号密码邮箱不能为空！！',
+        icon: 'none'
+      })
+    } else {
     wx.request({
-      url: 'http://192.168.2.149:8080/updata',
+      url: 'http://192.168.2.149:8080/update',
       data: {
         account: this.data.account,
         password: this.data.password,
@@ -53,6 +59,7 @@ Page({
         }
       },
     })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

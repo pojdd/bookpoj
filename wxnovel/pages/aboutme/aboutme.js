@@ -10,9 +10,9 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     moveData: null,
-    name: "杜乐乐",
-    account: "1987633389",
-    sex: "男"
+    name: "",
+    account: "",
+    email:"1987633389@qq.com"
   },
   sigout: function () {
 
