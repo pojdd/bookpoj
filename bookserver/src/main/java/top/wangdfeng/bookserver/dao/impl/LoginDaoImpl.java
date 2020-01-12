@@ -29,9 +29,15 @@ public class LoginDaoImpl implements LoginDao {
         QueryRunner queryRunner=new QueryRunner(dataSource);
         try {
             User user =queryRunner.query(SQL_LOGIN,new BeanHandler<User>(User.class),ap.getAccount());
-            System.out.println(user.getPassword());
-            if(user.getPassword().equals(ap.getPassword())){
-                return user;
+            if(user==null){
+                return null;
+            }else{
+                if(user.getPassword().equals(ap.getPassword())){
+                    //成功登录
+                    RecentDaoImpl recentDao=new RecentDaoImpl();
+                    recentDao.setRecentTime(dataSource,user.getAccount());
+                    return user;
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();

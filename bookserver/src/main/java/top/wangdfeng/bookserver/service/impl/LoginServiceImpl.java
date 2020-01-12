@@ -16,7 +16,6 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public User login(AP ap) {
-        System.out.println("ap:"+ap.toString());
         return loginDao.login(ap);
     }
 }
