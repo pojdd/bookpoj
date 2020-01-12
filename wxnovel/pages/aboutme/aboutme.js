@@ -6,24 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
+    user: "",
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     moveData: null,
     name: "",
     account: "",
-    email:"1987633389@qq.com"
+    email: ""
   },
-  sigout: function () {
 
-  },
-  info: function () {
+  info: function() {
     wx.navigateTo({
       url: '/pages/info/info',
     })
   },
 
-  moveClick: function () {
+  moveClick: function() {
     var animation = wx.createAnimation({
       duration: 3000,
       delay: 0,
@@ -32,13 +31,26 @@ Page({
     });
     animation.opacity(0.5).scale(1.125, 1.125).backgroundColor("white").step();
     animation.opacity(1).scale(1, 1).backgroundColor("white").step();
-    this.setData({ moveData: animation.export() })
+    this.setData({
+      moveData: animation.export()
+    })
   },
+  zhuxiao: function() {
+    
+    wx.removeStorageSync('user')
+    console.log("remove")
+    wx.redirectTo({
+      url: '/pages/login/login',
+    })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    this.setData({
+      user: wx.getStorageSync("user")
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -68,49 +80,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
