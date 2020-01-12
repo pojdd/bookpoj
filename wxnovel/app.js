@@ -80,6 +80,10 @@ App({
       }
     })
   },
+  onPageNotFound:function(){
+    console.log("退出小程序")
+  },
+
   globalData: {
     userInfo: null
   }

@@ -30,15 +30,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int insertUser(User user) {
-        Date date = new Date();//获得系统时间.
-        SimpleDateFormat sdf =   new SimpleDateFormat( " yyyy-MM-dd HH:mm:ss " );
-        String nowTime = sdf.format(date);
-        Date time=null;
-        try {
-            time = sdf.parse( nowTime );
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
         QueryRunner queryRunner=new QueryRunner(dataSource);
         try {
             /*
