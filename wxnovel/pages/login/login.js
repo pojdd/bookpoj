@@ -1,4 +1,4 @@
-// pages/aboutme/aboutme.js
+// pages/login/login.js
 const app = getApp()
 Page({
 
@@ -6,33 +6,67 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imageicon:"https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1784924842,4155015882&fm=26&gp=0.jpg",
+    ac:"",
+    pw:"",
+    result:"",
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    moveData: null,
-    name: "杜乐乐",
-    account: "1987633389",
-    sex: "男"
-  },
-  sigout: function () {
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
 
   },
-  info: function () {
-    wx.navigateTo({
-      url: '/pages/info/info',
+
+  getac:function(e){
+    this.setData({
+      ac:e.detail.value,
     })
   },
-
-  moveClick: function () {
-    var animation = wx.createAnimation({
-      duration: 3000,
-      delay: 0,
-      duration: 500,
-      timingFunction: "ease",
-    });
-    animation.opacity(0.5).scale(1.125, 1.125).backgroundColor("white").step();
-    animation.opacity(1).scale(1, 1).backgroundColor("white").step();
-    this.setData({ moveData: animation.export() })
+  getpw: function (e) {
+    this.setData({
+      pw: e.detail.value,
+    })
+  },
+  toregist:function(){
+    wx.navigateTo({
+      url: '../regist/regist',
+    })
+  },
+  forgetpw: function () {
+    wx.navigateTo({
+      url: '../forgetpw/forgetpw',
+    })
+  },
+  login:function(){
+    if (this.data.ac == "" && this.data.pw == ""){
+      wx.showToast({
+        title: '账号密码不能为空！！',
+        icon:'none'
+      })
+    }else{
+    var that=this;
+    wx.request({
+      url: 'http://192.168.2.149:8080/login',
+      data:{
+        u_account:this.data.ac,
+        u_password:this.data.pw 
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        console.log(res)
+        that.setData({
+          result:res.data
+        })
+        if (res.data==false){
+          wx.showToast({
+            title: '账号密码不正确！！',
+            icon: 'none'
+          })
+        }
+      }
+    })
+    }
   },
 
   /**
@@ -76,7 +110,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

@@ -1,0 +1,85 @@
+/* pages/login/login.wxss */
+.container {
+height: 100%;
+padding-top: 10rpx;
+display: flex;  
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+box-sizing: border-box;
+} 
+.img{
+  margin-top: 40rpx;
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+
+}
+.imgicon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 250rpx;
+  
+}
+input{
+  text-align: center;
+  width: 80%;
+  height: 100rpx;
+  border: 3rpx solid;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 50rpx;
+  border-radius: 30rpx;
+}
+.btn{
+  margin: 50rpx;
+  width: 40%;
+  height: 100rpx;
+  background-color:aqua;
+  border-radius: 20rpx;
+  border: 3rpx solid;
+  box-shadow: 10px 10px 5px #888888;
+}
+.vr{
+  width: 80%;
+  height: 100rpx;
+  margin-top: 50rpx;
+}
+.imgv{
+  
+}
+.buttom{
+  margin-top: 300rpx;
+  width: 100%;
+  height: 100rpx;
+ 
+}
+.bv1{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  margin-left: 5%;
+  text-align: center;
+  background-color: bisque;
+}
+.bv2{
+  float: left;
+  width: 30%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: bisque;
+}
+.bv3{
+   width: 30%;
+  height: 100rpx;
+  margin-right: 5%;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: bisque;
+  float: right;
+}

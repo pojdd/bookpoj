@@ -1,0 +1,28 @@
+/* pages/regist/regist.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+input{
+  width: 80%;
+  height: 100rpx;
+  border: 3rpx solid;
+  box-shadow: 10px 10px 5px #888888;
+  margin-top: 50rpx;
+  border-radius: 30rpx;
+}
+.btn{
+  margin: 50rpx;
+  width: 40%;
+  height: 100rpx;
+  background-color:aqua;
+  border-radius: 20rpx;
+  border: 3rpx solid;
+  box-shadow: 10px 10px 5px #888888;
+}

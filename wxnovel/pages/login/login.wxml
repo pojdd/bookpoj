@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+
+<view class="imgicon">
+  <image class="img"  src="{{userInfo.avatarUrl}}" mode="cover"></image>
+</view>
+
+<view class="container">
+  <input bindinput="getac" placeholder="请输入账号">
+  </input>
+  <input bindinput="getpw" placeholder="请输入密码">
+  </input>
+  <button bindtap="login" class="btn">登录</button>
+  <text>{{result}}</text>
+
+  <view class="buttom">
+    <view  class="bv1" bindtap="forgetpw">
+      <text>忘记密码         </text>
+      </view>
+      <view class="bv2">
+        <text>|</text>
+      </view>
+      <view class="bv3" bindtap="toregist">
+        <text>用户注册           </text>
+      </view>
+    </view>
+  </view>

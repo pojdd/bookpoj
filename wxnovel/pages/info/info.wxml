@@ -1,0 +1,23 @@
+<!--pages/info/info.wxml-->
+<view class="container1">
+  <view class="imgicon">
+    <image class="img" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  </view>
+  <view class="init" animation="{{slide_up1}}">
+    <text class="tx">姓名：{{name}}</text>
+  </view>
+  <view class="init" animation="{{slide_up2}}">
+    <text class="tx">账号：{{account}}</text>
+  </view>
+  <view class="init" animation="{{slide_up3}}">
+    <text class="tx">性别：{{sex}}</text>
+  </view>
+  <view class="init" animation="{{slide_up4}}">
+    <text class="tx">总阅读时间：{{time}}</text>
+  </view>
+  <view class="init" animation="{{slide_up5}}">
+    <text class="tx">最近登录时间：{{lasttime}}                                       </text></view>
+    <view class="init2" animation="{{slide_up5}}">
+      <text class="tx2" bindtap="changepw">修改密码</text>
+    </view>
+  </view>

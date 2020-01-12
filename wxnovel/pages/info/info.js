@@ -1,4 +1,4 @@
-// pages/aboutme/aboutme.js
+// pages/info/info.js
 const app = getApp()
 Page({
 
@@ -6,39 +6,28 @@ Page({
    * 页面的初始数据
    */
   data: {
+    name: "杜乐乐",
+    account: "1987633389",
+    sex: "男",
+
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    moveData: null,
-    name: "杜乐乐",
-    account: "1987633389",
-    sex: "男"
   },
-  sigout: function () {
 
-  },
-  info: function () {
+  changepw:function(){
     wx.navigateTo({
-      url: '/pages/info/info',
+      url: '/pages/forgetpw/forgetpw',
     })
-  },
+    
 
-  moveClick: function () {
-    var animation = wx.createAnimation({
-      duration: 3000,
-      delay: 0,
-      duration: 500,
-      timingFunction: "ease",
-    });
-    animation.opacity(0.5).scale(1.125, 1.125).backgroundColor("white").step();
-    animation.opacity(1).scale(1, 1).backgroundColor("white").step();
-    this.setData({ moveData: animation.export() })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.app = getApp()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -76,14 +65,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.app.slideupshow(this, 'slide_up1', 0, 1)
 
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up2', 0, 1)
+    }.bind(this), 200);
+
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up3', 0, 1)
+    }.bind(this), 300);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up4', 0, 1)
+    }.bind(this), 400);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up5', 0, 1)
+    }.bind(this), 500);
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    this.app.slideupshow(this, 'slide_up1', 200, 0)
+    //延时展现容器2，做到瀑布流的效果，见上面预览图
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up2', 200, 0)
+    }.bind(this), 200);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up3', 200, 0)
+    }.bind(this), 300);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up4', 200, 0)
+    }.bind(this), 400);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up5', 200, 0)
+    }.bind(this), 500);
   },
 
   /**

@@ -1,2 +1,34 @@
 <!--pages/aboutme/aboutme.wxml-->
-<text>pages/aboutme/aboutme.wxml</text>
+<view class="container1">
+  <view class="headinfo" animation="{{moveData}}" bindlongtap='moveClick'>
+
+    <view class="leftinfo">
+      <view class="userinfoleft">
+        <image class="img" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <view class="userinforight">
+        <view class="username">
+          <text>用户名:{{name}}</text>
+        </view>
+        <view class="useraccount">
+          <text>账号:{{account}}</text>
+        </view>
+        <view class="usersex">
+          <text>性别：{{sex}}</text>
+        </view>
+
+      </view>
+      <view class="readtime">阅读时长：{{}} </view>
+    </view>
+
+    <view class="rightinfo">
+      <view class="gout" bindtap="sigout">注销</view>
+      <view class="info" bindtap="info">详情</view>
+    </view>
+  </view>
+  </view>
+  <view class="bottom">
+  
+  
+  
+  </view>
