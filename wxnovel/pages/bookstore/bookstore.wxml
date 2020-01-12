@@ -1,2 +1,81 @@
 <!--pages/bookstore/bookstore.wxml-->
-<text>pages/bookstore/bookstore.wxml</text>
+<view >
+<swiper class="swiper" autoplay="true" interval="3000" duration="1500" indicator-dots="true" indicator-color="#fff">
+  <block wx:for="{{background}}">
+    <swiper-item>
+      <image src="{{item}}" class="swiperimg"></image>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class="body">
+    <view class="view-item">
+        <text class="view-item-text1">猜你喜欢</text>
+        <text class="view-item-text2">换一换</text>
+    </view>
+
+    <view class="view-item-book">
+      <view class="view-item-book1">
+        <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+      <view class="view-item-book1">
+        <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+      <view class="view-item-book1">
+              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+      <view class="view-item-book1">
+              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+      <view class="view-item-book1">
+              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+      <view class="view-item-book1">
+              <image class="view-item-book1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <text class="view-item-book1-text">都市最强医仙</text>
+      </view>
+    </view>
+  <view class="view-item">
+        <text class="view-item-text1">热销爽文</text>
+    </view>
+  <view class="view-item-fire">
+
+    <view class="view-item-fire-body1">
+        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <view class="view-item-fire-body1-view">
+          <text class="view-item-fire-body1-view-text1">荒野之王</text>
+          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
+          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
+        </view>
+    </view>
+
+    <view class="view-item-fire-body1">
+        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <view class="view-item-fire-body1-view">
+          <text class="view-item-fire-body1-view-text1">荒野之王</text>
+          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
+          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
+        </view>
+    </view>
+
+
+    <view class="view-item-fire-body1">
+        <image class="view-item-fire-body1-img" src="http://img.c0m.io/quanben.io/upload/thumbnail/book_22000_22999/book_22353.jpg"></image>
+        <view class="view-item-fire-body1-view">
+          <text class="view-item-fire-body1-view-text1">荒野之王</text>
+          <text class="view-item-fire-body1-view-text2">作者: 寂静岭</text>
+          <text class="view-item-fire-body1-view-text3">我增流落在死亡之地:百慕大小给...</text>
+        </view>
+    </view>
+
+  </view>
+</view>
+
+
+
+
