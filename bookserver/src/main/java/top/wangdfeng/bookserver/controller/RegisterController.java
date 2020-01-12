@@ -16,7 +16,7 @@ public class RegisterController {
     /**/
 
     @RequestMapping("/regist")
-    public int regac(User user){
+    public int regac(User user) throws Exception {
         return registService.attemptReg(user);
     }
 }
