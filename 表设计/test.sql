@@ -74,6 +74,7 @@ CREATE TABLE `user` (
   `userid` int(11) NOT NULL,
   `account` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `password` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 

@@ -5,24 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ac:"",
-    pw:"",
-    name:""
+    account:"",
+    password:"",
+    email:""
   },
   
   getac:function(e){
     this.setData({
-      ac:e.detail.value
+      account:e.detail.value
     })
   },
   getpw: function (e) {
     this.setData({
-      pw: e.detail.value
+      password: e.detail.value
     })
   },
-  getname: function (e) {
+  getemail: function (e) {
     this.setData({
-      name: e.detail.value
+      email: e.detail.value
     })
   },
 
@@ -30,9 +30,9 @@ btn:function(){
   wx.request({
     url: 'http://192.168.2.149:8080/regist',
     data:{
-      u_account:this.data.ac,
-      u_password:this.data.pw,
-      u_name:this.data.name
+      account:this.data.account,
+      password:this.data.password,
+      email:this.data.email
     },
     header: {
       'content-type': 'application/json' },
