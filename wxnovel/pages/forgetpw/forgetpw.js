@@ -5,9 +5,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    account: "",
+    password: "",
+    email: ""
+  },
+  getac: function (e) {
+    this.setData({
+      account: e.detail.value
+    })
+  },
+  getpw: function (e) {
+    this.setData({
+      password: e.detail.value
+    })
+  },
+  getemail: function (e) {
+    this.setData({
+      email: e.detail.value
+    })
   },
 
+
+  btn: function () {
+    wx.request({
+      url: 'http://192.168.2.149:8080/updata',
+      data: {
+        account: this.data.account,
+        password: this.data.password,
+        email: this.data.email
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        if (res.data == 1) {
+          wx.showToast({
+            title: '修改成功',
+          })
+          wx.navigateBack({
+
+          })
+        } else {
+          wx.showToast({
+            title: '修改失败',
+          })
+
+        }
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

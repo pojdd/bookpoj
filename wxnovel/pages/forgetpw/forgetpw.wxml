@@ -3,7 +3,7 @@
 <view class="container">
   <input placeholder="请输入账号" bindinput="getac"></input>
   <input placeholder="请输入密码" bindinput="getpw"></input>
-  <input placeholder="请输入邮箱" bindinput="getname"></input>
+  <input placeholder="请输入邮箱" bindinput="getemail"></input>
   
   <button class="btn" bindtap="btn">确定</button>
 </view>
