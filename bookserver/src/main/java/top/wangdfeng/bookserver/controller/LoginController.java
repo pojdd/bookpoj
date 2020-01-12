@@ -15,7 +15,6 @@ public class LoginController {
 
     @RequestMapping("/login")
     public User login(AP ap){
-        loginService.login(ap);
-        return null;
+        return loginService.login(ap);
     }
 }

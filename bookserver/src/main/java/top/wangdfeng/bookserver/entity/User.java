@@ -5,6 +5,33 @@ public class User {
     private String account;
     private String password;
     private String email;
+    private String recentime;
+    private int sumreadtime;
+
+    public User(int userid, String account, String password, String email, String recentime, int sumreadtime) {
+        this.userid = userid;
+        this.account = account;
+        this.password = password;
+        this.email = email;
+        this.recentime = recentime;
+        this.sumreadtime = sumreadtime;
+    }
+
+    public String getRecentime() {
+        return recentime;
+    }
+
+    public void setRecentime(String recentime) {
+        this.recentime = recentime;
+    }
+
+    public int getSumreadtime() {
+        return sumreadtime;
+    }
+
+    public void setSumreadtime(int sumreadtime) {
+        this.sumreadtime = sumreadtime;
+    }
 
     public User() {
     }
