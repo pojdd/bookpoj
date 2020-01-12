@@ -6,7 +6,7 @@ def downBook(id,name):
     downUrl='http://www.qbbqg.com/modules/article/txtarticle.php?id='
     log("下载链接:"+downUrl+id+"\n")
     r = rs.get(downUrl+id)
-    with open(name+".txt", "wb") as code:
+    with open("./book/"+name+".txt", "wb") as code:
             code.write(r.content)
 def getPage(num):
     url='http://m.qbbqg.com/full/'+str(num)+'/'
@@ -72,6 +72,7 @@ def saveL(a,b):
 
 
 #---------初始化----------
+
 if not os.path.isfile("save"):  # 无文件时创建
     fd = open("save", mode="w", encoding="utf-8")
     fd.write("1 1")
@@ -82,8 +83,8 @@ with open("save") as fp:#初始化存档
 getnum=re.compile(r'[0-9]+')
 nums=getnum.findall(content)
 
-# if  os.path.exists('book')==False:#初始化目录
-#     os.mkdir('book')
+if  os.path.exists('book')==False:#初始化目录
+    os.mkdir('book')
 
 #---------初始化----------
 
@@ -104,3 +105,4 @@ for pagenum in range(int(nums[0])+1,1218):#继续其他页面的下载
 
 # with open("data.txt", "a+") as code:
 #         code.write(getPage(6))
+

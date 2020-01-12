@@ -30,21 +30,23 @@
 
 
 
-import pymysql
-conn =pymysql.connect(
-    host ='127.0.0.1',
-    port = 3306,
-    user = 'root',
-    password ='123',
-    database ='test',
-    charset ='utf8'
-)
-cursor =conn.cursor()  #获取一个光标
-sql ='insert into bookcontent (bookid,chapter) values (%s,%s);'
- 
-name = '11'
-pwd = '11'
-cursor.execute(sql, [name, pwd])
-conn.commit()
-cursor.close()
-conn.close()
+# import pymysql
+# import datetime
+# conn =pymysql.connect(
+#     host ='127.0.0.1',
+#     port = 3306,
+#     user = 'root',
+#     password ='123',
+#     database ='test',
+#     charset ='utf8'
+# )
+# cursor =conn.cursor()  #获取一个光标
+# sql ='insert into bookcontent (bookid,chapter,bookcontent) values (%s,%s,%s);'
+# # datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+# cursor.execute(sql, [bookid,chapter1,bookcontent])
+# conn.commit()
+# cursor.close()
+# conn.close()
+
+# import datetime
+# print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
