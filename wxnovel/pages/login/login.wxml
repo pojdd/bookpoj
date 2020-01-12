@@ -7,7 +7,7 @@
 <view class="container">
   <input bindinput="getac" placeholder="请输入账号">
   </input>
-  <input bindinput="getpw" placeholder="请输入密码">
+  <input bindinput="getpw" type="password" placeholder="请输入密码">
   </input>
   <button bindtap="login" class="btn">登录</button>
   <text>{{result}}</text>

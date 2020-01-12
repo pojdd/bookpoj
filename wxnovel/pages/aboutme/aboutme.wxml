@@ -11,18 +11,18 @@
           <text >用户名:{{userInfo.nickName}}</text>
         </view>
         <view class="useraccount">
-          <text>账号:{{account}}</text>
+          <text>账号:{{user.account}}</text>
         </view>
         <view class="usereamil">
-          <text>邮箱：{{email}}</text>
+          <text>邮箱：{{user.email}}</text>
         </view>
 
       </view>
-      <view class="readtime">阅读时长：{{}} </view>
+      <view class="readtime">阅读时长：{{user.userid}} </view>
     </view>
 
     <view class="rightinfo">
-      <view class="gout" bindtap="sigout">注销</view>
+      <view class="gout" bindtap="zhuxiao">注销</view>
       <view class="info" bindtap="info">详情</view>
     </view>
   </view>

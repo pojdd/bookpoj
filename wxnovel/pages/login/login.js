@@ -52,9 +52,10 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res){
-        console.log(res)
-        that.setData({
-          result:res.data
+        wx.setStorageSync("user", res.data)
+        console.log(res.data)
+        wx.switchTab({
+          url: '../bookshelf/bookshelf',
         })
         if (res.data==false){
           wx.showToast({
@@ -71,6 +72,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(wx.getStorageSync("user")){
+      wx.switchTab({
+        url: '../bookshelf/bookshelf',
+      })
+    }
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
