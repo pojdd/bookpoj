@@ -16,9 +16,11 @@
         <text class="view-item-text2">换一换</text>
     </view>
     <view class="view-item-book">
-      <view class="view-item-book1"  wx:for="{{fantsy}}">
-        <image class="view-item-book1-img" src="{{item.pic}}"></image>
-        <text class="view-item-book1-text">{{item.bookname}}</text>
+      <view class="view-item-book1"  wx:for="{{fantsy}}"   bindtap="fantsytap" data-index="{{index}}"
+      >
+        <image class="view-item-book1-img" src="{{item.pic}}" bindtap="fantsytap" data-index="{{index}}"></image>
+        <text class="view-item-book1-text" bindtap="fantsytap" data-index="{{index}}"
+>{{item.bookname}}</text>
       </view>
     </view>
     <!--fantsy novel model end-->
@@ -27,13 +29,12 @@
         <text class="view-item-text1">都市爽文</text>
     </view>
   <view class="view-item-fire">
-
-    <view class="view-item-fire-body1" wx:for="{{city}}">
-        <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
+    <view class="view-item-fire-body1" wx:for="{{city}}" bindtap="citytap" data-index="{{index}}">
+        <image class="view-item-fire-body1-img" src="{{item.pic}}" bindtap="citytap" data-index="{{index}}"></image>
         <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
-          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
-          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
+          <text class="view-item-fire-body1-view-text1" bindtap="citytap" data-index="{{index}}">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2" bindtap="citytap" data-index="{{index}}">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3" bindtap="citytap" data-index="{{index}}">{{item.shortsummry}}</text>
         </view>
     </view>
   </view>
@@ -45,9 +46,9 @@
         <text class="view-item-text2">换一换</text>
     </view>
     <view class="view-item-book">
-      <view class="view-item-book1"  wx:for="{{selfcultivation}}">
-        <image class="view-item-book1-img" src="{{item.pic}}"></image>
-        <text class="view-item-book1-text">{{item.bookname}}</text>
+      <view class="view-item-book1"  wx:for="{{selfcultivation}}" bindtap="selfcultivationtap" data-index="{{index}}">
+        <image class="view-item-book1-img" src="{{item.pic}}" bindtap="selfcultivationtap" data-index="{{index}}"></image>
+        <text class="view-item-book1-text" bindtap="selfcultivationtap" data-index="{{index}}">{{item.bookname}}</text>
       </view>
     </view>
     <!--selfcultivation novel model end-->
@@ -58,29 +59,29 @@
     </view>
   <view class="view-item-fire">
 
-    <view class="view-item-fire-body1" wx:for="{{crossing}}">
+    <view class="view-item-fire-body1" wx:for="{{crossing}}" bindtap="crossingtap" data-index="{{index}}">
         <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
-        <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
-          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
-          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
+        <view class="view-item-fire-body1-view" bindtap="crossingtap" data-index="{{index}}">
+          <text class="view-item-fire-body1-view-text1" bindtap="crossingtap" data-index="{{index}}">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2" bindtap="crossingtap" data-index="{{index}}">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3" bindtap="crossingtap" data-index="{{index}}">{{item.shortsummry}}</text>
         </view>
     </view>
   </view>
   <!--crossing  novel model start -->
 
-  <!--onlinegame novel model start -->
+  <!--game novel model start -->
     <view class="view-item">
         <text class="view-item-text1">女生精选</text>
         <text class="view-item-text2">换一换</text>
     </view>
     <view class="view-item-book">
-      <view class="view-item-book1"  wx:for="{{girl}}">
-        <image class="view-item-book1-img" src="{{item.pic}}"></image>
-        <text class="view-item-book1-text">{{item.bookname}}</text>
+      <view class="view-item-book1"  wx:for="{{girl}}" bindtap="girltap" data-index="{{index}}">
+        <image class="view-item-book1-img" src="{{item.pic}}" bindtap="girltap" data-index="{{index}}"></image>
+        <text class="view-item-book1-text" bindtap="girltap" data-index="{{index}}">{{item.bookname}}</text>
       </view>
     </view>
-    <!--onlinegame novel model end-->
+    <!--gametap novel model end-->
 
 
             <!--scifi novel model start -->
@@ -89,12 +90,12 @@
     </view>
   <view class="view-item-fire">
 
-    <view class="view-item-fire-body1" wx:for="{{scifi}}">
-        <image class="view-item-fire-body1-img" src="{{item.pic}}"></image>
-        <view class="view-item-fire-body1-view">
-          <text class="view-item-fire-body1-view-text1">{{item.bookname}}</text>
-          <text class="view-item-fire-body1-view-text2">  作者 :{{item.author}}</text>
-          <text class="view-item-fire-body1-view-text3">{{item.shortsummry}}</text>
+    <view class="view-item-fire-body1" wx:for="{{scifi}}" bindtap="scifitap" data-index="{{index}}">
+        <image class="view-item-fire-body1-img" src="{{item.pic}}" bindtap="scifitap" data-index="{{index}}"></image>
+        <view class="view-item-fire-body1-view" bindtap="scifitap" data-index="{{index}}">
+          <text class="view-item-fire-body1-view-text1" bindtap="scifitap" data-index="{{index}}">{{item.bookname}}</text>
+          <text class="view-item-fire-body1-view-text2" bindtap="scifitap" data-index="{{index}}">  作者 :{{item.author}}</text>
+          <text class="view-item-fire-body1-view-text3" bindtap="scifitap" data-index="{{index}}">{{item.shortsummry}}</text>
         </view>
     </view>
   </view>
@@ -106,9 +107,9 @@
         <text class="view-item-text2">换一换</text>
     </view>
     <view class="view-item-book">
-      <view class="view-item-book1"  wx:for="{{onlinegame}}">
-        <image class="view-item-book1-img" src="{{item.pic}}"></image>
-        <text class="view-item-book1-text">{{item.bookname}}</text>
+      <view class="view-item-book1"  wx:for="{{onlinegame}}" bindtap="onelinegametap" data-index="{{index}}">
+        <image class="view-item-book1-img" src="{{item.pic}}" bindtap="onelinegametap" data-index="{{index}}"></image>
+        <text class="view-item-book1-text" bindtap="onelinegametap" data-index="{{index}}">{{item.bookname}}</text>
       </view>
     </view>
     <!--onelinegame novel model end-->

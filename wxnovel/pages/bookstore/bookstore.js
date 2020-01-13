@@ -196,5 +196,71 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  fantsytap:function(event){
+    let that = this.data.fantsy[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail',that)
+      }
+    })
+  },
+
+  citytap: function (event) {
+    let that = this.data.city[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
+  selfcultivationtap: function (event) {
+    let that = this.data.selfcultivation[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
+  crossingtap: function (event) {
+    let that = this.data.crossing[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
+  girltap: function (event) {
+    let that = this.data.girl[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
+  scifitap: function (event) {
+    let that = this.data.scifi[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
+
+  onelinegametap: function(event) {
+    let that = this.data.onlinegame[event.target.dataset.index];
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+      success: function (res) {
+        res.eventChannel.emit('bookdetail', that)
+      }
+    })
+  },
 })
