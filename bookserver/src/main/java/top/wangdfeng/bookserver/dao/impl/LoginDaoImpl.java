@@ -25,7 +25,6 @@ public class LoginDaoImpl implements LoginDao {
 
     @Override
     public User login(AP ap) {
-        System.out.println(ap.getAccount());
         QueryRunner queryRunner=new QueryRunner(dataSource);
         try {
             User user =queryRunner.query(SQL_LOGIN,new BeanHandler<User>(User.class),ap.getAccount());

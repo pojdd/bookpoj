@@ -10,7 +10,6 @@ import javax.annotation.Resource;
 
 @Service
 public class RegistServiceImpl  implements RegistService {
-
     @Resource
     private UserDao userDao;
     @Override
