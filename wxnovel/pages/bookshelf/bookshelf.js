@@ -7,7 +7,41 @@ Page({
    */
   data: {
     user:"",
-    bookshelf:[]
+    bookshelf:[],
+    dialogShow: false,
+    showOneButtonDialog: false,
+    buttons: [{ text: '取消' }, { text: '确定' }],
+    temp:""
+  },
+
+  openConfirm: function (res) {
+    this.setData({
+      temp: res.target.dataset.index
+    })
+    this.setData({
+      dialogShow: true
+    })
+  },
+
+  tapDialogButton(e) {
+    var that=this
+    if (e.detail.index==1){
+      console.log(this.data.bookshelf[this.data.temp])
+      console.log(wx.getStorageSync('user').userid)
+      wx.request({
+        url: 'http://localhost:8080/bookshelf_del',
+        data:{
+          "userid": wx.getStorageSync('user').userid,
+          "bookid": that.data.bookshelf[that.data.temp].bookid
+        }
+      })
+      this.getBookShelf()
+    }else{
+      console.log("点击了取消")
+    }
+    this.setData({
+      dialogShow: false,
+    })
   },
 
   /**
@@ -22,15 +56,19 @@ Page({
         timingFunc: 'easeIn'
       }
     })
+    this.getBookShelf()
+  },
+
+  getBookShelf:function(){
     var that=this
     wx.request({
       url: 'http://localhost:8080/getshelfs',
-      data:{
+      data: {
         "userid": wx.getStorageSync('user').userid
       },
-      success:function(res){
+      success: function (res) {
         that.setData({
-          bookshelf:res.data
+          bookshelf: res.data
         })
       }
     })

@@ -1,0 +1,39 @@
+/* pages/chapters/chapters.wxss */
+.chapterframe{
+  height: 80rpx;
+  background-color: rgb(200, 221, 240);
+  align-content: center;
+  animation:backgroundcolor 5s;
+}
+.chapter{
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 25px;
+  background: rgb(208, 218, 226);
+  align-content: center;
+  height: 30px;
+  animation: chapterlength 1s;
+}
+.text{
+  font-size: 40rpx;
+  animation: fontsize 1.5s;
+}
+@keyframes fontsize
+{
+    0%   {font-size: 1rpx;}
+    100% {font-size: 40rpx;}
+}
+@keyframes chapterlength
+{
+    0%   {width: 0%}
+    0%   {width: 80%}
+    100% {width: 100%}
+}
+@keyframes backgroundcolor
+{
+    0%   {background: rgb(200, 221, 240);}
+    25%  {background: rgb(228, 228, 201);}
+    50%  {background: rgb(178, 191, 214);}
+    100% {background: rgb(200, 221, 240);}
+}

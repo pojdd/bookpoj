@@ -1,0 +1,13 @@
+<!--pages/chapters/chapters.wxml-->
+<view wx:for="{{chapters}}" class="chapterframe" 
+  bindtap="getDetail" data-chapterindex="{{index}}">
+  <view class="chapter"
+  bindtap="getDetail" data-chapterindex="{{index}}">
+    <text class="text"bindtap="getDetail" 
+    data-chapterindex="{{index}}">{{chapters[index]}}</text>
+  </view>
+</view>
+<!-- <view class="ctrl">
+  <button>上一页</button>
+  <button>下一页</button>
+</view> -->
