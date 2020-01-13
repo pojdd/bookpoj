@@ -2,7 +2,7 @@
 <!--pages/regist/regist.wxml-->
 <view class="container">
     <input disabled='{{inputlock}}' class="i1" placeholder="账号:{{user.account}}" bindinput="getac"></input>
-    <input class="i1" disabled="{{inputlock}}" placeholder="邮箱:{{user.email}}" bindinput="geteamil"></input>
+    <input class="i1" disabled="{{inputlock}}" placeholder="邮箱:{{user.email}}" bindinput="getemail"></input>
   
   <input class="inpw" placeholder="请输入密码" bindinput="getpw"></input>
 

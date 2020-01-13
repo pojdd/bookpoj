@@ -6,74 +6,103 @@ Page({
    * 页面的初始数据
    */
   data: {
-    inputlock:true,
-    user:"",
+    inputlock: true,
+    user: "",
     password: "",
-    account:"",
-    email:""
+    account: "",
+    email: ""
   },
-  
-  getpw: function (e) {
+
+  getpw: function(e) {
     this.setData({
       password: e.detail.value
     })
   },
-  getac: function (e) {
+  getac: function(e) {
     this.setData({
       account: e.detail.value
     })
   },
-  getemail: function (e) {
+  getemail: function(e) {
     this.setData({
       email: e.detail.value
     })
   },
 
+  checkEmail: function(email) {
 
-  btn: function () {
+    let str = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+
+    if (str.test(email)) {
+
+      return true
+
+    } else {
+
+
+
+      return false
+
+    }
+  },
+
+  btn: function() {
     console.log(this.data.account)
+    console.log(this.data.email)
+    console.log(this.data.password)
     if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
       wx.showToast({
         title: '账号密码邮箱不能为空！！',
         icon: 'none'
       })
     } else {
-    wx.request({
-      url: 'http://192.168.2.149:8080/update',
-      data: {
-        account: this.data.account,
-        password: this.data.password,
-        email: this.data.email
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        if (res.data == 1) {
-          wx.showToast({
-            title: '请前往邮箱修改',
-          })
-          wx.navigateBack({
+      let email = this.data.email
+      let checkedNum = this.checkEmail(email)
+      if (checkedNum == true) {
+        wx.request({
+          url: 'http://192.168.2.149:8080/update',
+          data: {
+            account: this.data.account,
+            password: this.data.password,
+            email: this.data.email
+          },
+          header: {
+            'content-type': 'application/json'
+          },
+          success(res) {
+            if (res.data == 1) {
+              wx.showToast({
+                title: '请前往邮箱修改',
+                icon: 'none'
+              })
+              wx.navigateBack({
 
-          })
-        } else {
-          wx.showToast({
-            title: '修改失败',
-          })
+              })
+            } else {
+              wx.showToast({
+                title: '修改失败',
+                icon: 'none'
+              })
 
-        }
-      },
-    })
+            }
+          },
+        })
+      } else {
+        wx.showToast({
+          title: '邮箱格式不正确',
+          icon: 'none'
+        })
+      }
     }
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     console.log(wx.getStorageSync("user"))
-    if (wx.getStorageSync("user")){
-    this.setData({
-      user:wx.getStorageSync("user")
+    if (wx.getStorageSync("user")) {
+      this.setData({
+        user: wx.getStorageSync("user")
       })
       this.setData({
         account: wx.getStorageSync("user").account
@@ -84,7 +113,7 @@ Page({
       this.setData({
         inputlock: true
       })
-    }else{
+    } else {
       this.setData({
         inputlock: false
       })
@@ -94,49 +123,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
