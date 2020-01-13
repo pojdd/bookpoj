@@ -87,12 +87,12 @@ checkEmail: function (email) {
             console.log(res.data)
             if (res.data == 1) {
               wx.showToast({
-                title: '注册成功',
-                duration: 1000,
+                title: '去邮箱验证吧!',
+                duration: 6000,
               })
               setTimeout(function () {
                 wx.navigateBack()
-              }, 1000)
+              }, 6000)
             } else {
               wx.showToast({
                 title: '注册失败',

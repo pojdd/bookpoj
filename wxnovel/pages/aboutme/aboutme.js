@@ -48,6 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.app = getApp()
     this.setData({
       user: wx.getStorageSync("user")
     })
@@ -88,14 +89,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    this.app.slideupshow(this, 'slide_up1', 0, 1)
 
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up2', 0, 1)
+    }.bind(this), 200);
+
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up3', 0, 1)
+    }.bind(this), 300);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up4', 0, 1)
+    }.bind(this), 400);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up5', 0, 1)
+    }.bind(this), 500);
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {
-
+    this.app.slideupshow(this, 'slide_up1', 200, 0)
+    //延时展现容器2，做到瀑布流的效果，见上面预览图
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up2', 200, 0)
+    }.bind(this), 200);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up3', 200, 0)
+    }.bind(this), 300);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up4', 200, 0)
+    }.bind(this), 400);
+    setTimeout(function () {
+      this.app.slideupshow(this, 'slide_up5', 200, 0)
+    }.bind(this), 500);
   },
 
   /**
