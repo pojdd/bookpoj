@@ -2,8 +2,8 @@
 <view wx:for="{{chapters}}" class="chapterframe" 
   bindtap="getDetail" data-chapterindex="{{index}}">
   <view class="chapter"
-  bindtap="getDetail" data-chapterindex="{{index}}">
-    <text class="text"bindtap="getDetail" 
+  bindtap="" data-chapterindex="{{index}}">
+    <text class="text"bindtap="" 
     data-chapterindex="{{index}}">{{chapters[index]}}</text>
   </view>
 </view>
