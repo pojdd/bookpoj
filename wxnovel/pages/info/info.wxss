@@ -22,6 +22,9 @@
 .tx{
   margin-left: 25rpx;
 }
+.txt{
+  font-size: 35rpx;
+}
 
 .init2{
   text-align: center;
