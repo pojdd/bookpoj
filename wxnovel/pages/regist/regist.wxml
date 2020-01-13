@@ -3,9 +3,5 @@
   <input placeholder="请输入账号" bindinput="getac" maxlength='10'></input>
   <input placeholder="请输入密码" bindinput="getpw" type="password" maxlength='24'></input>
   <input placeholder="请输入邮箱" bindchange="getemail" maxlength='24'></input>
-  <input placeholder="请输入账号" bindinput="getac"></input>
-  <input placeholder="请输入密码" bindinput="getpw" type="password"></input>
-  <input placeholder="请输入邮箱" bindinput="getemail"></input>
-
   <button class="btn" bindtap="btn">注册</button>
 </view>
