@@ -1,21 +1,28 @@
 /* pages/aboutme/aboutme.wxss */
 .container1 {
-  height: 100%;
-  display: flex;
+
+ 
   flex-direction: column;
+   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
 } 
 
 .headinfo{
+  
+  text-shadow: 5px 5px 10px gray;
   padding: 30rpx;
   margin-top: 50rpx;
 width: 85%;
 height: 300rpx;
 border-radius: 30rpx;
-border: 3rpx solid;
+border: 4rpx solid;
 box-shadow: 10px 10px 5px #888888;
+background-size: cover; 
+background-size: 100% 100%;
+background-repeat: no-repeat; 
+background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2815200423,2399908662&fm=26&gp=0.jpg);
 }
 .leftinfo{  
   width: 75%;
@@ -58,7 +65,7 @@ box-shadow: 10px 10px 5px #888888;
   
 }
 .gout{
-  margin-left: 70rpx;
+  margin-left: 60rpx;
   width: 90rpx;
   height: 50rpx;
   
@@ -69,8 +76,8 @@ box-shadow: 10px 10px 5px #888888;
   
 }
 .readtime{
-  margin-left: 30rpx;
-  margin-top: 80rpx;
+  margin-left: 150rpx;
+  margin-top: 85rpx;
 }
 .con{
   clear: both;
@@ -80,8 +87,10 @@ box-shadow: 10px 10px 5px #888888;
 }
 
 .imgicon{
-  width: 50rpx;
-  height: 50rpx;
+  padding-top: 50rpx;
+  margin-top: 25rpx;
+  width: 47rpx;
+  height: 47rpx;
 }
 .bottom{
   margin-top: 100rpx;
@@ -104,4 +113,41 @@ box-shadow: 10px 10px 5px #888888;
     white-space: nowrap;
     text-overflow: ellipsis;
 
+}
+
+.init{
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 7px 7px 5px #888888;
+  opacity: 0;
+  width: 98%;
+  height: 100rpx;
+  line-height: 100rpx;
+display: flex;
+  align-items: center;
+
+}
+.tx{
+  width: 100%;
+  height: 100%;
+ margin-left: 10rpx;
+}
+.bottom{
+  clear: both;
+  display: block;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.imageicon{
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.bo{
+  margin-top: 90rpx;
 }

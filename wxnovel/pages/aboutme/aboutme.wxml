@@ -1,14 +1,14 @@
 <!--pages/aboutme/aboutme.wxml-->
-<view class="container1">
-  <view class="headinfo" animation="{{moveData}}" bindlongtap='moveClick'>
+<view class="container1" >
+  <view class="headinfo" animation="{{moveData}}"                                     bindlongtap='moveClick'>
 
     <view class="leftinfo">
       <view class="userinfoleft">
-        <image class="img" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <image class="img" src="{{userInfo.avatarUrl}}"             mode="cover"></image>
       </view>
       <view class="userinforight">
         <view class="username">
-          <text length='8'>用户名:{{userInfo.nickName}}</text>
+          <text length='8'>用户名:{{userInfo.nickName}}               </text>
         </view>
         <view class="useraccount">
           <text>账号:{{user.account}}</text>
@@ -19,7 +19,8 @@
         </view>
 
       </view>
-      <view class="readtime">阅读时长：{{user.sumreadtime}} </view>
+      <view class="readtime">阅读时长：{{user.sumreadtime}} 
+      </view>
     </view>
 
     <view class="rightinfo">
@@ -27,9 +28,26 @@
       <view class="info" bindtap="info">详情</view>
     </view>
   </view>
-  </view>
   <view class="bottom">
-  
-  
-  
+    <view class="init" animation="{{slide_up1}}">
+    <image class="imageicon" src="/iconimg/help.png"></image><text class="tx">帮助</text>
   </view>
+    <view class="init" animation="{{slide_up2}}">
+    <image class="imageicon" src="/iconimg/QQ.png"></image>
+    <text class="tx">联系我们QQ：1987633389 </text>
+  </view>
+  <view class="init" animation="{{slide_up3}}">
+  <image class="imageicon" src="/iconimg/develop.png"></image>
+    <text class="tx">开发者名单:韩享 卢世奇 汪道风 杜乐乐 </text>
+  </view>
+  <view class="bo">
+   <view>
+    <text>QQ群：183449141</text>  
+    </view>
+  <view>
+    <text>版本号：beta 1.0</text>  
+    </view>
+    </view>
+  </view>
+  </view>
+ 
