@@ -95,6 +95,13 @@
 					"id": -1,
 					"name": "pages/forgetpw/forgetpw",
 					"pathName": "pages/forgetpw/forgetpw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
 					"scene": null
 				}
 			]
