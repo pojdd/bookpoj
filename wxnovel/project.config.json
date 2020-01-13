@@ -81,6 +81,13 @@
 					"id": -1,
 					"name": "pages/regist/regist",
 					"pathName": "pages/regist/regist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
 					"scene": null
 				}
 			]
