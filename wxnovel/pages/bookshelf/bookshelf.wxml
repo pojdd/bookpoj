@@ -1,2 +1,10 @@
 <!--pages/bookshelf/bookshelf.wxml-->
-<text>pages/bookshelf/bookshelf.wxml</text>
+<image class="shelftop" src="../../iconimg/backtap2.png">
+</image>
+<view class="shelfbody">
+  <view class="shelfitem" wx:for="{{bookshelf}}">
+    <image src="{{item.pic}}" class="item-image"></image>
+    <text class="item-text">{{item.bookname}}</text>
+  </view>
+</view>
+

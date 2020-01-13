@@ -16,6 +16,7 @@ public class BookshelfServiceImpl  implements BookshelfService {
 
     @Override
     public List<Book> getUserBookShelf(String userid) {
+        System.out.println("userid为:"+userid);
         return bookshelfDao.queryBooksByUserId(userid);
     }
 }
