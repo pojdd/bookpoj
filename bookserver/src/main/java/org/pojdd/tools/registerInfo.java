@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import top.wangdfeng.bookserver.entity.User;
 
+import java.io.IOException;
 import java.util.Date;
 
 public class registerInfo {
@@ -22,11 +23,15 @@ public class registerInfo {
         json.put("password",user.getPassword());
         json.put("email",user.getEmail());
         json.put("time",d1.getTime());
+//        json.put("time",123456);
         json.put("digest",
                 MD5.encode(user.getAccount()+user.getPassword()+user.getEmail()+d1.getTime()+solt).substring(1,8));
         //信息摘要用于验证信息是否被修改
         AESUtil.setKEY(solt);
         String url=AESUtil.encrypt(json.toJSONString());
+        System.out.println("原始的url:"+url);
+        url=Base64.encodeBytes(url.getBytes());
+        System.out.println("创建的url:"+url);
         return url;
     }
 
@@ -37,6 +42,15 @@ public class registerInfo {
      * @return 如果User有效则返回，否则返回NULL
      */
     public static User testUrl(String url,long timeout){//返回信息是否失效
+        try {
+            byte[] url1=Base64.decode(url);
+            url=new String(url1);
+            System.out.println("转换的url:"+url);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("接受的url:"+url);
         Date d1=new Date();
         AESUtil.setKEY(solt);
         url=AESUtil.decrypt(url);
@@ -60,16 +74,17 @@ public class registerInfo {
         user.setEmail(email);
         return user;
     }
-
     //测试函数有效性
+
+    //JhDsarC25CYVA+65Vq0lvK4Hs0Sl1Di/jqm2lYZOchmW2e/ytN0zGEX8MUjXy05W46q+wSgAz/sPrHDiBuLcMsSpRfWOSdJIJwUiGLVM9f+/DMssvrDw3oPUYpmS2ZEZ
     public static void main(String[] args) {
 //        System.out.println(MD5.encode("ddd"));
         User user=new User();
-        user.setAccount("123cvffffaa");
-        user.setPassword("q1111asfas1");
+        user.setAccount("plko");
+        user.setPassword("123");
         user.setEmail("pojdd@qq.com");
         String url=registerInfo.generateUrl(user);
-        System.out.println(url);
+//        System.out.println(url);
 
         //如果延迟2秒则失效
 //        try {
@@ -79,7 +94,8 @@ public class registerInfo {
 //        }
 
 //        user.setPassword("1111asfas1");
-        User u= registerInfo.testUrl(url,1000);
+
+        User u= registerInfo.testUrl(url,7000);
         if(u==null)
             System.out.println("失效");
         else
