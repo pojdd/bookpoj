@@ -13,6 +13,7 @@
   margin-top: 20rpx;
   border-radius: 20rpx;
   box-shadow: 7px 7px 5px #888888;
+  border: 3rpx solid;
   opacity: 0;
   width: 90%;
   height: 100rpx;
@@ -20,9 +21,6 @@
 }
 .tx{
   margin-left: 25rpx;
-}
-.txt{
-  font-size: 35rpx;
 }
 
 .init2{

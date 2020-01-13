@@ -11,24 +11,7 @@ Page({
     account: "",
     password: "",
     email: ""
-  },     
-checkEmail: function (email) {
-     
-    let str = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
-     
-    if (str.test(email)) {
-     
-    return true
-     
-    } else {
-     
-  
-     
-    return false
-     
-    }
-     
-    },
+  },
 
   getac: function (e) {
     console.log(e.detail.value.length)
@@ -70,6 +53,7 @@ checkEmail: function (email) {
         icon: 'none'
       })
     } else {
+<<<<<<< HEAD
       let email = this.data.email
       let checkedNum = this.checkEmail(email)
       if (checkedNum == true) {
@@ -107,6 +91,35 @@ checkEmail: function (email) {
         })
       }
       
+=======
+      wx.request({
+        url: 'http://localhost:8080/regist',
+        data: {
+          account: this.data.account,
+          password: this.data.password,
+          email: this.data.email
+        },
+        header: {
+          'content-type': 'application/json'
+        },
+        success(res) {
+          console.log(res.data)
+          if (res.data == 1) {
+            wx.showToast({
+              title: '注册成功',
+              duration: 1000,
+            })
+            setTimeout(function () {
+              wx.navigateBack()
+            }, 1000)
+              } else {
+            wx.showToast({
+              title: '注册失败',
+            })
+          }
+        },
+      })
+>>>>>>> 7075e96897e8328c7039100eb2b1ea758a95f307
     }
   },
   /**

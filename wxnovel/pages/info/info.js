@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    user:"",
+    name: "杜乐乐",
+    account: "1987633389",
+    sex: "男",
+
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -24,12 +27,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
     this.app = getApp()
-    this.setData({
-      user: wx.getStorageSync("user")
-    })
-    console.log(wx.getStorageSync("user"))
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
