@@ -1,2 +1,3 @@
 application.properties
 wxnovel/project.config.json
+bookserver/src/main/resources/application.properties
