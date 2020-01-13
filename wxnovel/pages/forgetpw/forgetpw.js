@@ -53,14 +53,44 @@ Page({
   },
 
   btn: function() {
-    console.log(this.data.account)
-    console.log(this.data.email)
-    console.log(this.data.password)
+    var animation = wx.createAnimation({
+      delay: 0,
+      duration: 500,
+      timingFunction: "ease",
+    });
     if (this.data.account == "" || this.data.password == "" || this.data.email == "" || this.data.password2 == "") {
-      wx.showToast({
-        title: '账号密码邮箱不能为空！！',
-        icon: 'none'
-      })
+      if (this.data.account == "" ){
+        animation.scale(1.125, 1.125).backgroundColor("red").step();
+        animation.opacity(1).scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_ac: animation.export()
+        })
+      }
+      if (this.data.password == "") {
+        animation.scale(1.125, 1.125).backgroundColor("red").step();
+        animation.opacity(1).scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_pw: animation.export()
+        })
+      }
+      if (this.data.email == "") {
+        animation.scale(1.125, 1.125).backgroundColor("red").step();
+        animation.opacity(1).scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_email: animation.export()
+        })
+      }
+      if (this.data.password2 == "") {
+        animation.scale(1.125, 1.125).backgroundColor("red").step();
+        animation.opacity(1).scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_pw2: animation.export()
+        })
+      }
+      // wx.showToast({
+      //   title: '账号密码邮箱不能为空！！',
+      //   icon: 'none'
+      // })
     } else {
       if(this.data.password==this.data.password2){
       let email = this.data.email

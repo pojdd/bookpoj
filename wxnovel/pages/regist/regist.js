@@ -63,8 +63,36 @@ checkEmail: function (email) {
 
 
   btn: function () {
+    var animation = wx.createAnimation({
+      delay: 0,
+      duration: 500,
+      timingFunction: "ease",
+    });
     let that = this
     if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
+      if (this.data.account == ""){
+        animation.scale(1.025, 1.025).backgroundColor("red").step();
+        animation.scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_ac: animation.export()
+        })
+      }
+      if (this.data.password == "") {
+        animation.scale(1.025, 1.025).backgroundColor("red").step();
+        animation.scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_pw: animation.export()
+        })
+      }
+      if (this.data.email == "") {
+        animation.scale(1.025, 1.025).backgroundColor("red").step();
+        animation.scale(1, 1).backgroundColor("white").step();
+        this.setData({
+          slide_email: animation.export()
+        })
+      }
+      
+
       wx.showToast({
         title: '账号密码邮箱不能为空！！',
         icon: 'none'

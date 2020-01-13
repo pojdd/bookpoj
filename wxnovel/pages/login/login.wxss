@@ -33,6 +33,7 @@ input{
   box-shadow: 10px 10px 5px #888888;
   margin-top: 50rpx;
   border-radius: 30rpx;
+
 }
 .btn{
   margin: 50rpx;

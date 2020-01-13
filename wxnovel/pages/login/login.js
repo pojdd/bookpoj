@@ -6,6 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    slide_ac:null,
+    slide_ac: null,
+    inputacstate:"black",
+    inputpwstate: "black",
     ac:"",
     pw:"",
     result:"",
@@ -35,12 +39,46 @@ Page({
     })
   },
   login:function(){
-    if (this.data.ac == "" && this.data.pw == ""){
-      wx.showToast({
-        title: '账号密码不能为空！！',
-        icon:'none'
+    var animation = wx.createAnimation({
+      delay: 0,
+      duration: 500,
+      timingFunction: "ease",
+    });
+    if (this.data.ac == "" || this.data.pw == ""){
+    if (this.data.ac == ""){
+      animation.scale(1.025, 1.025).step();
+      animation.scale(1, 1).step();
+      this.setData({
+        slide_ac: animation.export()
       })
-    }else{
+      this.setData({
+        inputacstate:"red"
+      })
+    } else {
+      this.setData({
+        inputacstate: "black"
+      })}
+   if(this.data.pw == "") {
+     animation.scale(1.025, 1.025).step();
+     animation.scale(1, 1).step();
+     this.setData({
+       slide_pw: animation.export()
+     })
+      this.setData({
+        inputpwstate: "red"
+      })}else {
+      this.setData({
+        inputpwstate: "black"
+      })}
+    }
+      else{
+      this.setData({
+        inputpwstate: "black"
+      })
+      this.setData({
+        inputacstate: "black"
+      })
+        
     var that=this;
     wx.request({
       url: 'http://localhost:8080/login',

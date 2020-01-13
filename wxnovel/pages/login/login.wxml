@@ -5,9 +5,9 @@
 </view>
 
 <view class="container">
-  <input bindinput="getac" placeholder="请输入账号">
+  <input  animation="{{slide_ac}}" bindinput="getac" style="border-color:{{inputacstate}}" placeholder="请输入账号">
   </input>
-  <input bindinput="getpw" type="password" placeholder="请输入密码">
+  <input animation="{{slide_pw}}" bindinput="getpw" style="border-color:{{inputpwstate}}" type="password" placeholder="请输入密码">
   </input>
   <button bindtap="login" class="btn">登录</button>
   <text>{{result}}</text>

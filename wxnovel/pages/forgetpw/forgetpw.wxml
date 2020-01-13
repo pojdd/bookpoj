@@ -1,11 +1,11 @@
 <!--pages/forgetpw/forgetpw.wxml-->
 <!--pages/regist/regist.wxml-->
 <view class="container">
-    <input disabled='{{inputlock}}' class="i1" placeholder="账号:{{user.account}}" bindinput="getac"></input>
-    <input class="i1" disabled="{{inputlock}}" placeholder="邮箱:{{user.email}}" bindinput="getemail"></input>
+    <input animation="{{slide_ac}}" disabled='{{inputlock}}' class="i1" placeholder="账号:{{user.account}}" bindinput="getac"></input>
+    <input animation="{{slide_email}}" class="i1" disabled="{{inputlock}}" placeholder="邮箱:{{user.email}}" bindinput="getemail"></input>
   
-  <input class="inpw" placeholder="请输入密码" bindinput="getpw"></input>
-  <input class="inpw2" placeholder="请再次输入密码" bindinput="getpw2"></input>
+  <input animation="{{slide_pw}}" class="inpw" placeholder="请输入密码" bindinput="getpw"></input>
+  <input animation="{{slide_pw2}}" class="inpw2" placeholder="请再次输入密码" bindinput="getpw2"></input>
 
 
   <button class="btn" bindtap="btn">确定</button>
