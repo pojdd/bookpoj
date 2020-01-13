@@ -16,9 +16,11 @@
         <text class="view-item-text2">换一换</text>
     </view>
     <view class="view-item-book">
-      <view class="view-item-book1"  wx:for="{{fantsy}}">
-        <image class="view-item-book1-img" src="{{item.pic}}"></image>
-        <text class="view-item-book1-text">{{item.bookname}}</text>
+      <view class="view-item-book1"  wx:for="{{fantsy}}"   bindtap="fantsytap" data-index="{{index}}"
+      >
+        <image class="view-item-book1-img" src="{{item.pic}}" bindtap="fantsytap" data-index="{{index}}"></image>
+        <text class="view-item-book1-text" bindtap="fantsytap" data-index="{{index}}"
+>{{item.bookname}}</text>
       </view>
     </view>
     <!--fantsy novel model end-->

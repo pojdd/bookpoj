@@ -196,5 +196,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  fantsytap:function(event){
+    console.log(event.target.dataset.index)
   }
 })
