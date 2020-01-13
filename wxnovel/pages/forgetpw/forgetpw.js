@@ -140,6 +140,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.setNavigationBarTitle({
+      title: '修改密码',
+    })
     console.log(wx.getStorageSync("user"))
     if (wx.getStorageSync("user")) {
       this.setData({

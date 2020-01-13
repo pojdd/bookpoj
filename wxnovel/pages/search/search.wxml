@@ -14,3 +14,7 @@
          <text wx:else data-key='back'>返回</text>
     </view>
 </view>
+
+<view wx:for="{{keys}}" class="keysList" data-bookid="{{keys[index].bookid}}"bindtap="getbook">
+  {{keys[index].bookname}}
+</view>

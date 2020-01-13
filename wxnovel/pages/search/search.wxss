@@ -70,3 +70,11 @@
   color: #DC3C24;
   white-space: nowrap;
 }
+.keysList{
+  /* background-color: rgba(212, 205, 205, 0.829); */
+  margin-top: 5rpx;
+  padding-left: 40rpx;
+  border-bottom: 2rpx solid gray;
+  height: 100rpx;
+  line-height: 100rpx;
+}

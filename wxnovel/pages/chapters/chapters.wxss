@@ -4,7 +4,6 @@
   background-color: rgb(200, 221, 240);
   align-content: center;
   animation:backgroundcolor 5s;
-  background-color: 
 }
 .chapter{
   width: 100%;

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    keys:""
   },
 
   /**
@@ -13,6 +13,28 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  SearchInput:function(e){
+    var that=this
+    console.log(e.detail.value)
+    wx.request({
+      url: 'http://localhost:8080/Serach',
+      data:{
+        key: e.detail.value
+      },
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          keys:res.data
+        })
+      }
+    })
+  },
+  SearchConfirm:function(e){
+    console.log(e.detail.value)
+  },
+  getbook:function(e){
+    console.log("getbook:"+e.currentTarget.dataset.bookid)
   },
 
   /**
