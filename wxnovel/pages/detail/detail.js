@@ -5,16 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    book:"",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#9c9c9e',
+      animation: {
+        duration: 400,
+        timingFunc: 'easeIn'
+      }
+    })
     const eventChannel = this.getOpenerEventChannel();
     eventChannel.on('bookdetail', function (data){
       console.log(data)
+      that.setData({
+        book:data
+      })
     })
   },
 

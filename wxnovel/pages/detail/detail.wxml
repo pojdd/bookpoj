@@ -1,2 +1,18 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="detail_top">
+    <view class="detail_top_pic">
+        <image src="{{book.pic}}" class="detail_top_pic_item"></image>
+    </view>
+    <view class="detail_top_info">
+      <text class="detail_top_info_text_bookname">{{book.bookname}}</text>
+      <text class="detail_top_info_text_author">作者: {{book.author}}</text>
+      <text class="detail_top_info_text_class">类型：{{book.bookclass}}</text>
+      <text class="detail_top_info_text_readcount">阅读次数：{{book.readcount}}</text>
+      <text class="detail_top_info_text_update">更新时间：{{book.updatatime}}</text>
+    </view>
+</view>
+
+<view class="detail_partwo">
+    <button class="detail_partwo_botton1">加入书架</button>
+    <button class="detail_partwo_botton2">立即阅读</button>
+</view>
