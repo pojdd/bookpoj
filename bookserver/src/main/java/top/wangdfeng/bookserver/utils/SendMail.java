@@ -7,9 +7,9 @@ import java.util.Date;
 import java.util.Properties;
 
 public class SendMail {
-    public static String myEmailAccount = "wdf2353829347@163.com";
-    public static String myEmailPassword = "wdf1997";
-    public static String myEmailSMTPHost = "smtp.163.com";
+    public static String myEmailAccount = "2353829347@qq.com";
+    public static String myEmailPassword = "reugylmwlurleacj";
+    public static String myEmailSMTPHost = "smtp.qq.com";
     public static void send(String  receiveMailAccount,String url) throws Exception {
         Properties props = new Properties();
         props.setProperty("mail.transport.protocol", "smtp");

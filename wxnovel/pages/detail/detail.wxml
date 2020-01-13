@@ -13,6 +13,17 @@
 </view>
 
 <view class="detail_partwo">
-    <button class="detail_partwo_botton1">加入书架</button>
+    <button class="detail_partwo_botton1" bindtap="addbookshelf">加入书架</button>
     <button class="detail_partwo_botton2">立即阅读</button>
 </view>
+<view class="sumview">
+<view  class="detail_parthree" bindtap="ellipsis">
+  <text class="detail_parthree_text {{ellipsis?'ellipsis':'unellipsis'}}" >{{book.summry}}</text>
+</view>
+<!-- 定义之后的组件 -->
+<view class="detail_partThree">
+    <button class="detail_partwo_botton1" bindtap="addbookshelf">加入书架</button>
+    <button class="detail_partwo_botton2">立即阅读</button>
+</view>
+</view>
+

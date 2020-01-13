@@ -6,6 +6,36 @@ Page({
    */
   data: {
     book:"",
+    ellipsis: true, // 文字是否收起，默认收起
+    
+  },
+
+  /**
+   * 收起/展开按钮点击事件
+   */
+  ellipsis: function () {
+    var value = !this.data.ellipsis;
+    this.setData({
+      ellipsis: value
+    })
+  },
+
+  addbookshelf:function(){
+    let that=this
+    wx.request({
+      url: 'http://localhost:8080/bookshelf_add',
+      data:{
+        "userid": wx.getStorageSync('user').userid,
+        "bookid": that.data.book.bookid
+      },
+      success:function(res){
+        if(res.data===1){
+           wx.showToast({
+             title: '成功加入书架！',
+           })
+        }
+      }
+    })
   },
 
   /**
@@ -41,7 +71,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+      console.log("界面切换");
   },
 
   /**

@@ -1,5 +1,10 @@
 // pages/bookshelf/bookshelf.js
 Page({
+  onTabItemTap(item){
+    if(item.index==0){
+      this.getBookShelf()
+    }
+  },
 
   /**
    * 页面的初始数据
