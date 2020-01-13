@@ -88,6 +88,13 @@
 					"id": -1,
 					"name": "pages/info/info",
 					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/forgetpw/forgetpw",
+					"pathName": "pages/forgetpw/forgetpw",
 					"scene": null
 				}
 			]
