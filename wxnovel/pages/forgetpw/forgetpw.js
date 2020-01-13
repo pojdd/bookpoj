@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputlock:true,
     user:"",
     password: "",
   },
@@ -56,9 +57,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(wx.getStorageSync("user"))
+    if (wx.getStorageSync("user")){
     this.setData({
       user:wx.getStorageSync("user")
-    })
+      })
+      this.setData({
+        inputlock: true
+      })
+    }else{
+      this.setData({
+        inputlock: false
+      })
+    }
   },
 
   /**
