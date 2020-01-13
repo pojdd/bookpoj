@@ -53,7 +53,6 @@
   width: 27%;
   height: 40%;
   margin-right: 37rpx;
-  z-index: 200;
 
 }
 .view-item-book1-img{
@@ -84,7 +83,7 @@
   height: 85%;
   margin-top: 20rpx;
   margin-left: 40rpx;
-   float: left
+  float: left
 }
 
 .view-item-fire-body1-view{
