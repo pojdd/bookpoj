@@ -9,7 +9,7 @@
   box-sizing: border-box;
 } 
 
-input{
+.inpw{
   text-align: center;
   width: 80%;
   height: 100rpx;
@@ -38,4 +38,12 @@ input{
 }
 .init text{
   margin-left: 50rpx;
+}
+.i1{
+   width: 80%;
+  height: 100rpx;
+  border-radius: 20rpx;
+  box-shadow: 7px 7px 5px #888888;
+  margin-top: 50rpx;
+  padding-left: 60rpx;
 }

@@ -6,8 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    inputlock:true,
     user:"",
     password: "",
+    account:"",
+    email:""
   },
   
   getpw: function (e) {
@@ -15,9 +18,20 @@ Page({
       password: e.detail.value
     })
   },
+  getac: function (e) {
+    this.setData({
+      account: e.detail.value
+    })
+  },
+  getemail: function (e) {
+    this.setData({
+      email: e.detail.value
+    })
+  },
 
 
   btn: function () {
+    console.log(this.data.account)
     if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
       wx.showToast({
         title: '账号密码邮箱不能为空！！',
@@ -56,9 +70,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(wx.getStorageSync("user"))
+    if (wx.getStorageSync("user")){
     this.setData({
       user:wx.getStorageSync("user")
-    })
+      })
+      this.setData({
+        account: wx.getStorageSync("user").account
+      })
+      this.setData({
+        email: wx.getStorageSync("user").email
+      })
+      this.setData({
+        inputlock: true
+      })
+    }else{
+      this.setData({
+        inputlock: false
+      })
+    }
   },
 
   /**
