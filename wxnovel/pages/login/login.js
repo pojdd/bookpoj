@@ -54,10 +54,11 @@ Page({
       success(res){
         wx.setStorageSync("user", res.data)
         console.log(res.data)
+        if (res.data) {
         wx.switchTab({
           url: '../bookshelf/bookshelf',
-        })
-        if (res.data==false){
+        })}
+        else{
           wx.showToast({
             title: '账号密码不正确！！',
             icon: 'none'

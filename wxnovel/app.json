@@ -11,7 +11,7 @@
     "pages/regist/regist",
     "pages/info/info",
     "pages/forgetpw/forgetpw",
-    "pages/detail/detail",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
