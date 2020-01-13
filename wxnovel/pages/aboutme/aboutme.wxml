@@ -13,13 +13,12 @@
         <view class="useraccount">
           <text>账号:{{user.account}}</text>
         </view>
-        <view class="usersex">
-          <text class="tx" wx:if="{{userInfo.gender==1}}">性别：男</text>
-    <text class="tx" wx:else="{{userInfo.gender==0}}">性别：女</text>
+        <view class="usereamil">
+          <text>邮箱：{{user.email}}</text>
         </view>
 
       </view>
-      <view class="readtime">阅读时长：{{user.sumreadtime}} </view>
+      <view class="readtime">阅读时长：{{user.userid}} </view>
     </view>
 
     <view class="rightinfo">
