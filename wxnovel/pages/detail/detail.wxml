@@ -22,8 +22,12 @@
 </view>
 <!-- 定义之后的组件 -->
 <view class="detail_partThree">
-    <button class="detail_partwo_botton1" bindtap="addbookshelf">加入书架</button>
-    <button class="detail_partwo_botton2">立即阅读</button>
+    <text class="detail_partThree_button1" bindtap="loadchapters">|   查看目录</text>
+    <text class="detail_partThree_button2">最新更新</text>
+</view>
+
+<view class="detail_partFour">
+
 </view>
 </view>
 

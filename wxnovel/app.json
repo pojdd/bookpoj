@@ -12,7 +12,8 @@
     "pages/info/info",
     "pages/forgetpw/forgetpw",
     "pages/detail/detail",
-    "pages/chapters/chapters"
+    "pages/chapters/chapters",
+    "pages/content/content"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -107,5 +107,16 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  loadchapters:function(){
+    var that=this;
+    const eventChannel = this.getOpenerEventChannel()
+    wx.navigateTo({
+      url: '/pages/chapters/chapters',
+      success:function(res){
+        res.eventChannel.emit('bookid', that.data.book.bookid)
+      }
+    })
+  },
 })

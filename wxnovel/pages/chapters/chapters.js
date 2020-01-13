@@ -25,7 +25,8 @@ Page({
       "第17章 狂暴猪王【求推荐，求收藏】",
       "第18章 生死之交【求推荐，求收藏】",
       "第19章 双BOSS【求推荐，求收藏】"
-    ]
+    ],
+    bookid:"",
   },
 
   /**
@@ -33,12 +34,21 @@ Page({
    */
   onLoad: function (options) {
     var that=this
+    const eventChannel = this.getOpenerEventChannel()
+    // 获取事件通道的值
+    eventChannel.on('bookid', function (data) {
+      that.setData({
+        bookid:data
+      })
+    })
+    var that=this
     wx.request({
-      url: '127.0.0.1:8080/xxxx',
+      url: 'http://localhost:8080/getChapters',
       data:{
-        bookid:options.bookid
+        bookid:that.data.bookid
       },
-      success(res){
+      success:function(res){
+        console.log(res.data)
         that.setData({
           chapters:res.data
         })
@@ -46,11 +56,12 @@ Page({
     })
   },
   getDetail(e){
+    let that=this
     console.log(e.currentTarget.dataset.chapterindex+1)
     wx.navigateTo({
-      url: 'xxx',
-      data:{
-        chapterid: e.currentTarget.dataset.chapterindex+1
+      url: '/pages/content/content',
+      success: function (res) {
+        res.eventChannel.emit('content', that.data.chapters[e.currentTarget.dataset.chapterindex + 1])
       }
     })
   },

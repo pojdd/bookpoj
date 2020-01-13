@@ -4,7 +4,7 @@
   <view class="chapter"
   bindtap="getDetail" data-chapterindex="{{index}}">
     <text class="text"bindtap="getDetail" 
-    data-chapterindex="{{index}}">{{chapters[index]}}</text>
+    data-chapterindex="{{index}}">{{item.chaptername}}</text>
   </view>
 </view>
 <!-- <view class="ctrl">
