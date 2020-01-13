@@ -1,27 +1,18 @@
 // pages/forgetpw/forgetpw.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    account: "",
+    user:"",
     password: "",
-    email: ""
   },
-  getac: function (e) {
-    this.setData({
-      account: e.detail.value
-    })
-  },
+  
   getpw: function (e) {
     this.setData({
       password: e.detail.value
-    })
-  },
-  getemail: function (e) {
-    this.setData({
-      email: e.detail.value
     })
   },
 
@@ -46,7 +37,7 @@ Page({
       success(res) {
         if (res.data == 1) {
           wx.showToast({
-            title: '修改成功',
+            title: '请前往邮箱修改',
           })
           wx.navigateBack({
 
@@ -65,7 +56,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      user:wx.getStorageSync("user")
+    })
   },
 
   /**

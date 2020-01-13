@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.0",
-	"appid": "wxa5403cf7006148d3",
+	"appid": "wx2e282b10dd31f8a2",
 	"projectname": "wxbook",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -81,6 +81,20 @@
 					"id": -1,
 					"name": "pages/regist/regist",
 					"pathName": "pages/regist/regist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/info/info",
+					"pathName": "pages/info/info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/forgetpw/forgetpw",
+					"pathName": "pages/forgetpw/forgetpw",
 					"scene": null
 				}
 			]

@@ -11,14 +11,44 @@ Page({
     account: "",
     password: "",
     email: ""
-  },
+  },     
+checkEmail: function (email) {
+     
+    let str = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+     
+    if (str.test(email)) {
+     
+    return true
+     
+    } else {
+     
+  
+     
+    return false
+     
+    }
+     
+    },
 
   getac: function (e) {
+    console.log(e.detail.value.length)
+    if(e.detail.value.length >= 10){
+      wx.showToast({
+        title: '账号位数不能超出10位',
+        icon:"none"
+      })
+    }
     this.setData({
       account: e.detail.value
     })
   },
   getpw: function (e) {
+    if (e.detail.value.length >= 24) {
+      wx.showToast({
+        title: '账号位数不能超出24位',
+        icon: "none"
+      })
+    }
     this.setData({
       password: e.detail.value
     })
@@ -73,8 +103,10 @@ Page({
       }else{
         wx.showToast({
           title: '邮箱格式不正确',
+          icon: "none"
         })
       }
+      
     }
   },
   /**
