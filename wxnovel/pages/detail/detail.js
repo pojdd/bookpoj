@@ -1,41 +1,19 @@
-// pages/bookshelf/bookshelf.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
-   * user是从缓存中的获取到数据
    */
   data: {
-    user:"",
-    bookshelf:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#c59ebb',
-      animation: {
-        duration: 400,
-        timingFunc: 'easeIn'
-      }
-    })
-    var that=this
-    wx.request({
-      url: 'http://localhost:8080/getshelfs',
-      data:{
-        "userid": wx.getStorageSync('user').userid
-      },
-      success:function(res){
-        that.setData({
-          bookshelf:res.data
-        })
-      }
-    })
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

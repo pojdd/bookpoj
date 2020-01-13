@@ -1,1 +1,37 @@
 /* pages/bookshelf/bookshelf.wxss */
+.clean{
+  display: block;
+  clear: both;
+}
+.shelftop{
+  width:100%;
+  height: 300rpx;
+  background-image:url("http://img.pptjia.com/image/20190107/f542c21b29ecb23d893b19e92d45af3f.jpg") ;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+
+.shelfbody{
+  width:100%;
+  height: 700rpx;
+}
+
+.shelfitem{
+  width:25%;
+  height: 35%;
+  text-align: center;
+  float:left;
+  margin-left:48rpx;
+  margin-top:40rpx;
+  padding-top: 30rpx;
+}
+
+.item-image{
+  width:100%;
+  height: 100%;
+}
+
+.item-text{
+  font-size: 30rpx;
+}

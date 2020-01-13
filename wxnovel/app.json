@@ -10,7 +10,8 @@
     "pages/aboutme/aboutme",
     "pages/regist/regist",
     "pages/info/info",
-    "pages/forgetpw/forgetpw"
+    "pages/forgetpw/forgetpw",
+    "pages/detail/detail",
   ],
   "window": {
     "backgroundTextStyle": "light",
