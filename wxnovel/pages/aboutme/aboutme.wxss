@@ -99,7 +99,7 @@ box-shadow: 10px 10px 5px #888888;
     font-size: 38rpx;
     color: #000000;
     line-height: 40rpx;
-    height: 120rpx;
+    height: 50rpx;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
