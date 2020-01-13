@@ -7,7 +7,28 @@ Page({
    */
   data: {
     user:"",
-    bookshelf:[]
+    bookshelf:[],
+    dialogShow: false,
+    showOneButtonDialog: false,
+    buttons: [{ text: '取消' }, { text: '确定' }],
+  },
+
+  openConfirm: function () {
+    this.setData({
+      dialogShow: true
+    })
+  },
+
+  tapDialogButton(e) {
+    console.log()
+    if (e.detail.index==1){
+      console.log("点击了确定")
+    }else{
+      console.log("点击了取消")
+    }
+    this.setData({
+      dialogShow: false,
+    })
   },
 
   /**

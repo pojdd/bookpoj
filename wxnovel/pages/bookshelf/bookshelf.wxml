@@ -2,9 +2,11 @@
 <image class="shelftop" src="../../iconimg/backtap2.png">
 </image>
 <view class="shelfbody">
-  <view class="shelfitem" wx:for="{{bookshelf}}">
+  <view class="shelfitem" wx:for="{{bookshelf}}" bindlongtap="openConfirm">
     <image src="{{item.pic}}" class="item-image"></image>
     <text class="item-text">{{item.bookname}}</text>
   </view>
 </view>
-
+    <mp-dialog title="test" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>test content</view>
+    </mp-dialog>
