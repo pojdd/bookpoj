@@ -5,6 +5,7 @@
     <input class="i1" disabled="{{inputlock}}" placeholder="邮箱:{{user.email}}" bindinput="getemail"></input>
   
   <input class="inpw" placeholder="请输入密码" bindinput="getpw"></input>
+  <input class="inpw2" placeholder="请再次输入密码" bindinput="getpw2"></input>
 
 
   <button class="btn" bindtap="btn">确定</button>

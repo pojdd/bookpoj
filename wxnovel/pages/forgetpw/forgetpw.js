@@ -9,6 +9,7 @@ Page({
     inputlock: true,
     user: "",
     password: "",
+    password2: "",
     account: "",
     email: ""
   },
@@ -16,6 +17,11 @@ Page({
   getpw: function(e) {
     this.setData({
       password: e.detail.value
+    })
+  },
+  getpw2: function (e) {
+    this.setData({
+      password2: e.detail.value
     })
   },
   getac: function(e) {
@@ -50,12 +56,13 @@ Page({
     console.log(this.data.account)
     console.log(this.data.email)
     console.log(this.data.password)
-    if (this.data.account == "" || this.data.password == "" || this.data.email == "") {
+    if (this.data.account == "" || this.data.password == "" || this.data.email == "" || this.data.password2 == "") {
       wx.showToast({
         title: '账号密码邮箱不能为空！！',
         icon: 'none'
       })
     } else {
+      if(this.data.password==this.data.password2){
       let email = this.data.email
       let checkedNum = this.checkEmail(email)
       if (checkedNum == true) {
@@ -93,6 +100,10 @@ Page({
           icon: 'none'
         })
       }
+    }else{wx.showToast({
+      title: '两次密码不一致',
+        icon: 'none'
+    })}
     }
   },
   /**
