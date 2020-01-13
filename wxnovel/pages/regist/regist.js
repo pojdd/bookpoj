@@ -11,7 +11,24 @@ Page({
     account: "",
     password: "",
     email: ""
-  },
+  },     
+checkEmail: function (email) {
+     
+    let str = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+     
+    if (str.test(email)) {
+     
+    return true
+     
+    } else {
+     
+  
+     
+    return false
+     
+    }
+     
+    },
 
   getac: function (e) {
     this.setData({
@@ -40,33 +57,42 @@ Page({
         icon: 'none'
       })
     } else {
-      wx.request({
-        url: 'http://localhost:8080/regist',
-        data: {
-          account: this.data.account,
-          password: this.data.password,
-          email: this.data.email
-        },
-        header: {
-          'content-type': 'application/json'
-        },
-        success(res) {
-          console.log(res.data)
-          if (res.data == 1) {
-            wx.showToast({
-              title: '注册成功',
-              duration: 1000,
-            })
-            setTimeout(function () {
-              wx.navigateBack()
-            }, 1000)
-              } else {
-            wx.showToast({
-              title: '注册失败',
-            })
-          }
-        },
-      })
+      let email = this.data.email
+      let checkedNum = this.checkEmail(email)
+      if (checkedNum == true) {
+        wx.request({
+          url: 'http://localhost:8080/regist',
+          data: {
+            account: this.data.account,
+            password: this.data.password,
+            email: this.data.email
+          },
+          header: {
+            'content-type': 'application/json'
+          },
+          success(res) {
+            console.log(res.data)
+            if (res.data == 1) {
+              wx.showToast({
+                title: '注册成功',
+                duration: 1000,
+              })
+              setTimeout(function () {
+                wx.navigateBack()
+              }, 1000)
+            } else {
+              wx.showToast({
+                title: '注册失败',
+              })
+            }
+          },
+        })
+      }else{
+        wx.showToast({
+          title: '邮箱格式不正确',
+        })
+      }
+      
     }
   },
   /**
