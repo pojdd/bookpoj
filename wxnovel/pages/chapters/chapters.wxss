@@ -4,16 +4,18 @@
   background-color: rgb(200, 221, 240);
   align-content: center;
   animation:backgroundcolor 5s;
+  background-color: 
 }
 .chapter{
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  border-radius: 25px;
+  /* text-align: center; */
+  /* border-radius: 25px; */
   background: rgb(208, 218, 226);
-  align-content: center;
+  /* align-content: center; */
   height: 30px;
   animation: chapterlength 1s;
+  padding-left: 40rpx;
 }
 .text{
   font-size: 40rpx;
