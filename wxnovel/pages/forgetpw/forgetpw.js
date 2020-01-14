@@ -109,10 +109,13 @@ Page({
           success(res) {
             if (res.data == 1) {
               wx.showToast({
-                title: '请前往邮箱修改',
-                icon: 'none'
+                title: '请前往邮箱确认',
+                icon: 'none',
+                duration: 6000
               })
-              wx.navigateBack({
+              wx.redirectTo({
+                url: '/pages/login/login',
+              })({
 
               })
             } else {
