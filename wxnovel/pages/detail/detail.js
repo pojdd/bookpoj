@@ -6,8 +6,8 @@ Page({
    */
   data: {
     book:"",
-    ellipsis: true, // 文字是否收起，默认收起
-    
+    ellipsis: true,
+    isadded:true,
   },
 
   /**
@@ -20,7 +20,24 @@ Page({
     })
   },
 
-  addbookshelf:function(){
+  vertifyState:function(){
+      var that=this
+      wx.request({
+        url: 'http://localhost:8080/vertify',
+        data:{
+          "userid": wx.getStorageSync('user').userid,
+          "bookid": that.data.book.bookid
+        },
+        success:function(res){
+          console.log(res.data)
+          that.setData({
+            isadded:res.data
+          })
+        }
+      })
+  },
+
+  addbookshelf:function(res){
     let that=this
     wx.request({
       url: 'http://localhost:8080/bookshelf_add',
@@ -34,6 +51,10 @@ Page({
              title: '成功加入书架！',
            })
         }
+        var added = !that.data.isadded
+        that.setData({
+          isadded: added
+        })
       }
     })
   },
@@ -53,11 +74,11 @@ Page({
     })
     const eventChannel = this.getOpenerEventChannel();
     eventChannel.on('bookdetail', function (data){
-      console.log(data)
       that.setData({
         book:data
       })
     })
+    this.vertifyState();
   },
 
   /**
@@ -71,7 +92,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      console.log("界面切换");
   },
 
   /**

@@ -7,6 +7,6 @@
     <text class="item-text" bindlongtap="openConfirm" data-index="{{index}}">{{item.bookname}}</text>
   </view>
 </view>
-    <mp-dialog title="test" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
-        <view>test content</view>
+    <mp-dialog title="确定" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>是否确定删除此书？</view>
     </mp-dialog>

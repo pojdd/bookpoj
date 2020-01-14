@@ -15,7 +15,7 @@ public class BookShelfAddController {
     private BookShelfAddService bookShelfAddService;
 
     @RequestMapping("bookshelf_add")
-    public int delete(BookShelf bookShelf){
+    public int add(BookShelf bookShelf){
         return bookShelfAddService.add(bookShelf);
     }
 }

@@ -72,9 +72,18 @@
   font-weight: 200;
   align-items: center;
   text-align: center;
+  border-radius:30rpx;
+}
+
+.detail_partwo_botton1_notadd{
   border: 1rpx #33a6ff solid;
   color: #33a6ff;
-  border-radius:30rpx;
+}
+
+
+.detail_partwo_botton1_add{
+  border: 1rpx #d1d1d1 solid;
+  color: #d1d1d1;
 }
 
 
