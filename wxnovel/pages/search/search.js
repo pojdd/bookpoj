@@ -37,6 +37,25 @@ Page({
   },
   getbook:function(e){
     console.log("getbook:"+e.currentTarget.dataset.bookid)
+    wx.request({
+      url: 'http://localhost:8080/getBookDetailByid',
+      data: {
+        "bookid":e.currentTarget.dataset.bookid
+      },
+      success: function (res) {
+        var book = res.data
+        console.log(res.data)
+        wx.navigateTo({
+          url: '/pages/detail/detail',
+          success: function (res) {
+            console.log(res)
+            res.eventChannel.emit('bookdetail', book)
+          }
+        })
+      }
+    })
+
+    
   },
 
   /**

@@ -97,7 +97,7 @@ Page({
       let checkedNum = this.checkEmail(email)
       if (checkedNum == true) {
         wx.request({
-          url: 'http://192.168.2.149:8080/update',
+          url: 'http://localhost:8080/modify_password',
           data: {
             account: this.data.account,
             password: this.data.password,
@@ -109,15 +109,17 @@ Page({
           success(res) {
             if (res.data == 1) {
               wx.showToast({
-                title: '请前往邮箱确认',
+                title: '修改成功',
                 icon: 'none',
                 duration: 6000
               })
-              wx.redirectTo({
-                url: '/pages/login/login',
-              })({
-
+              setTimeout(function (){
+                wx.removeStorageSync('user')
+                wx.reLaunch({
+                  url: '/pages/login/login',
+                }),6000
               })
+
             } else {
               wx.showToast({
                 title: '修改失败',
