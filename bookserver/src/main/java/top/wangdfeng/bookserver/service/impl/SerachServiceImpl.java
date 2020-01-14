@@ -2,7 +2,7 @@ package top.wangdfeng.bookserver.service.impl;
 
 import org.springframework.stereotype.Service;
 import top.wangdfeng.bookserver.dao.BookSerachDao;
-import top.wangdfeng.bookserver.entity.SerachKey;
+import top.wangdfeng.bookserver.to.SerachKey;
 import top.wangdfeng.bookserver.service.SerachService;
 
 import javax.annotation.Resource;

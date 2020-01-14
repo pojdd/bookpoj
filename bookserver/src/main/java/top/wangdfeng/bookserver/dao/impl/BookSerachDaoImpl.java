@@ -4,7 +4,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.springframework.stereotype.Repository;
 import top.wangdfeng.bookserver.dao.BookSerachDao;
-import top.wangdfeng.bookserver.entity.SerachKey;
+import top.wangdfeng.bookserver.to.SerachKey;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;

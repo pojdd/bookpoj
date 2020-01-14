@@ -1,6 +1,6 @@
 package top.wangdfeng.bookserver.dao;
 
-import top.wangdfeng.bookserver.entity.SerachKey;
+import top.wangdfeng.bookserver.to.SerachKey;
 
 import java.util.List;
 

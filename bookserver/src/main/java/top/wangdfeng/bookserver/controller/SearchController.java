@@ -2,7 +2,7 @@ package top.wangdfeng.bookserver.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import top.wangdfeng.bookserver.entity.SerachKey;
+import top.wangdfeng.bookserver.to.SerachKey;
 import top.wangdfeng.bookserver.service.SerachService;
 
 import javax.annotation.Resource;

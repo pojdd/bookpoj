@@ -1,4 +1,4 @@
-package top.wangdfeng.bookserver.entity;
+package top.wangdfeng.bookserver.to;
 
 public class SerachKey {
     private String bookname;
