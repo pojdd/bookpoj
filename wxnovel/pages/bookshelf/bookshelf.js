@@ -42,7 +42,7 @@ Page({
       })
       this.getBookShelf()
     }else{
-      console.log("点击了取消")
+
     }
     this.setData({
       dialogShow: false,

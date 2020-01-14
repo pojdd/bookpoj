@@ -8,6 +8,7 @@ Page({
     book:"",
     ellipsis: true,
     isadded:true,
+    relative:[],
   },
 
   /**
@@ -79,6 +80,27 @@ Page({
       })
     })
     this.vertifyState();
+    this.getRelative();
+  },
+
+  getRelative:function(){
+    var that=this
+    var bookclassname=that.data.book.bookclass;
+    var bookclassname1=bookclassname.split("[");
+    var bookclassname2=bookclassname1[1].split(']');
+    console.log(bookclassname1)
+    console.log(that.data.book.bookclass);
+    wx.request({
+      url: 'http://localhost:8080/relativebook',
+      data:{
+        "bookrelative": bookclassname2[0],
+      },
+      success:function(res){
+        that.setData({
+          relative:res.data
+        })
+      } 
+    })
   },
 
   /**

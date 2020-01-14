@@ -26,8 +26,14 @@
     <text class="detail_partThree_button2">最新更新</text>
 </view>
 
+<view>
+  <text>相关推荐</text>
+</view>
 <view class="detail_partFour">
-
+    <view class="shelfitem" wx:for="{{relative}}" bindlongtap="openConfirm" data-index="{{index}}">
+    <image src="{{item.pic}}" class="item-image" bindlongtap="openConfirm" data-index="{{index}}"></image>
+    <text class="item-text" bindlongtap="openConfirm" data-index="{{index}}">{{item.bookname}}</text>
+  </view>
 </view>
 </view>
 

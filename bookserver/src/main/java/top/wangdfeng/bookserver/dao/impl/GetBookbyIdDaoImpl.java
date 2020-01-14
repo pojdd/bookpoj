@@ -6,7 +6,6 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.springframework.stereotype.Repository;
 import top.wangdfeng.bookserver.dao.GetBookbyIdDao;
 import top.wangdfeng.bookserver.entity.Book;
-import top.wangdfeng.bookserver.entity.SerachKey;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
